@@ -1,120 +1,157 @@
-React-Redux Boilerplate with Firebase
-=====================
+<img src="https://raw.githubusercontent.com/react-boilerplate/react-boilerplate-brand/master/assets/banner-metal-optimized.jpg" alt="react boilerplate banner" align="center" />
 
-React + Redux + React Router + Firebase + Webpack + Node.js
+<br />
 
-# Table of Contents
-1. [Tech Stack](#tech-stack)
-2. [Features](#features)
-3. [Prerequisite](#prerequisite)
-4. [Dev Usage](#dev-usage)
-5. [Firebase Integration](#firebase-integration)
-6. [Tools Usage](#tools-usage)
-7. [Development Tasks](#development-tasks)
-8. [Production Builds](#production-builds)
-9. [Bundle Compression Support](#bundle-compression-support)
-10. [Future Features](#future-features)
-11. [License](#license)
-12. [Support](#support)
+<div align="center"><strong>Start your next react project in seconds</strong></div>
+<div align="center">A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices</div>
 
+<br />
 
-## Tech Stack <a name="tech-stack"></a>
-![alt text](http://i.imgur.com/hYzMgK3l.jpg "Tech Stack")
+<div align="center">
+  <!-- Dependency Status -->
+  <a href="https://david-dm.org/react-boilerplate/react-boilerplate">
+    <img src="https://david-dm.org/react-boilerplate/react-boilerplate.svg" alt="Dependency Status" />
+  </a>
+  <!-- devDependency Status -->
+  <a href="https://david-dm.org/react-boilerplate/react-boilerplate#info=devDependencies">
+    <img src="https://david-dm.org/react-boilerplate/react-boilerplate/dev-status.svg" alt="devDependency Status" />
+  </a>
+  <!-- Build Status -->
+  <a href="https://travis-ci.org/react-boilerplate/react-boilerplate">
+    <img src="https://travis-ci.org/react-boilerplate/react-boilerplate.svg" alt="Build Status" />
+  </a>
+  <!-- Test Coverage -->
+  <a href="https://coveralls.io/r/react-boilerplate/react-boilerplate">
+    <img src="https://coveralls.io/repos/github/react-boilerplate/react-boilerplate/badge.svg" alt="Test Coverage" />
+  </a>
+</div>
+<div align="center">
+    <!-- Backers -->
+  <a href="#backers">
+    <img src="https://opencollective.com/react-boilerplate/backers/badge.svg" alt="Backers" />
+  </a>
+      <!-- Sponsors -->
+  <a href="#sponsors">
+    <img src="https://opencollective.com/react-boilerplate/sponsors/badge.svg" alt="Sponsors" />
+  </a>
+  <a href="http://thinkmill.com.au/?utm_source=github&utm_medium=badge&utm_campaign=react-boilerplate">
+    <img alt="Supported by Thinkmill" src="https://thinkmill.github.io/badge/heart.svg" />
+  </a>
+  <!-- Gitter -->
+  <a href="https://gitter.im/mxstbr/react-boilerplate">
+    <img src="https://camo.githubusercontent.com/54dc79dc7da6b76b17bc8013342da9b4266d993c/68747470733a2f2f6261646765732e6769747465722e696d2f6d78737462722f72656163742d626f696c6572706c6174652e737667" alt="Gitter Chat" />
+  </a>
+</div>
 
-- React
-  - [X] React
-  - [X] React Hot Loader
-  - [X] React Router
-- Tools
-  - [X] Reactotron
-  - [X] Webpack Dashboard
-- Redux
-  - [X] Redux
-  - [X] React Redux
-  - [X] React Router Redux
-  - [X] Redux Thunk
-  - [X] Redux Dev Tools
-- Webpack    
-  - [X] Webpack
-  - [X] Webpack Dev Middleware
-  - [X] Webpack Hot Middleware
-- Firebase
-  - [X] Firebase
-- Linting
-  - [X] Eslint
-- Styles
-  - [X] Bootstrap
-- Testing
-  - [X] Mocha
-  - [X] Enzyme
-  - [X] Sinon
+<br />
 
+<div align="center">
+  <sub>Created by <a href="https://twitter.com/mxstbr">Max Stoiber</a> and maintained with ❤️ by an amazing <a href="https://github.com/orgs/react-boilerplate/teams/core">team of developers</a>.</sub>
+</div>
 
-## Features <a name="features"></a>
+## Features
 
-- Awesome React-Redux template built with webpack and ES6.
-- Firebase integration.
-- Sample login screen with Firebase authentication.
-- Sample registration screen with Firebase user authentication.
-- Optimized production build for webpack with gzip compression.
-- Ultimate Webpack Dashboard for development mode.
-- Integration of Reactotron with Redux.
-- Usage of Node Express server rather than Webpack dev server.
-- ESLint with Airbnb's config as base.
+<dl>
+  <dt>Quick scaffolding</dt>
+  <dd>Create components, containers, routes, selectors and sagas - and their tests - right from the CLI!</dd>
 
-## Prerequisite <a name="prerequisite"></a>
+  <dt>Instant feedback</dt>
+  <dd>Enjoy the best DX (Developer eXperience) and code your app at the speed of thought! Your saved changes to the CSS and JS are reflected instantaneously without refreshing the page. Preserve application state even when you update something in the underlying code!</dd>
 
-Please make sure that before starting the app, the firebase config is populated appropriately in config.js.
+  <dt>Predictable state management</dt>
+  <dd>Unidirectional data flow allows for change logging and time travel debugging.</dd>
 
-Before starting the app, firebase is initialized and hence if it doesnt find the key params, it will fail.
+  <dt>Next generation JavaScript</dt>
+  <dd>Use template strings, object destructuring, arrow functions, JSX syntax and more.</dd>
 
-## Dev Usage <a name="dev-usage"></a>
+  <dt>Next generation CSS</dt>
+  <dd>Write composable CSS that's co-located with your components for complete modularity. Unique generated class names keep the specificity low while eliminating style clashes. Ship only the styles that are on the page for the best performance.</dd>
 
-```
-git clone https://github.com/RanjithNair/react-redux-webpack-es6-firebase-boilerplate.gitc
-cd react-redux-webpack-es6-firebase-boilerplate
-npm install
-npm run dev
-```
-## Firebase Integration <a name="firebase-integration"></a>
+  <dt>Industry-standard routing</dt>
+  <dd>It's natural to want to add pages (e.g. `/about`) to your application, and routing makes this possible.</dd>
 
-- Go to your firebase console for your project.
-- Copy the firebase config and paste it in config.js
+  <dt>Industry-standard i18n internationalization support</dt>
+  <dd>Scalable apps need to support multiple languages, easily add and support multiple languages with `react-intl`.</dd>
 
-## Tools Usage <a name="tools-usage"></a>
+  <dt>Offline-first</dt>
+  <dd>The next frontier in performant web apps: availability without a network connection from the instant your users load the app.</dd>
 
-- Download [Reactotron](https://github.com/infinitered/reactotron/blob/master/docs/installing.md) and open it to capture logs and redux data.
-- `npm run dev` will open up the application in dev mode and will open Webpack Dashboard.
+  <dt>Static code analysis</dt>
+  <dd>Focus on writing new features without worrying about formatting or code quality. With the right editor setup, your code will automatically be formatted and linted as you work.</dd>
 
-## Development Tasks <a name="development-tasks"></a>
+  <dt>SEO</dt>
+  <dd>We support SEO (document head tags management) for search engines that support indexing of JavaScript content. (eg. Google)</dd>
+</dl>
 
-- `npm run dev` run the web app with lint and tests in watch mode
-- `npm run lint` linting javascript code usig eslint
-- `npm run test:watch` test using mocha, enzyme & sinon.
+But wait... there's more!
 
-## Production Builds <a name="production-builds"></a>
+- _The best test setup:_ Automatically guarantee code quality and non-breaking
+  changes. (Seen a react app with 100% test coverage before?)
+- _Native web app:_ Your app's new home? The home screen of your users' phones.
+- _The fastest fonts:_ Say goodbye to vacant text.
+- _Stay fast_: Profile your app's performance from the comfort of your command
+  line!
+- _Catch problems:_ AppVeyor and TravisCI setups included by default, so your
+  tests get run automatically on Windows and Unix.
 
-- `npm run start` will start the application with production build.
-- `npm run build:prod` will create the production build in dist folder.
+There’s also a <a href="https://vimeo.com/168648012">fantastic video</a> on how to structure your React.js apps with scalability in mind. It provides rationale for the majority of boilerplate's design decisions.
 
-## Bundle Compression Support <a name="bundle-compression-support"></a>
+<sub><i>Keywords: React.js, Redux, Hot Reloading, ESNext, Babel, react-router, Offline First, ServiceWorker, `styled-components`, redux-saga, FontFaceObserver</i></sub>
 
-For the production build, it has compression enabled. The underlying node server returns back the compressed version on request of js files thus making the loading of the application faster.
+## Quick start
 
-## Future Features <a name="future-features"></a>
+1.  Make sure that you have Node v8 or above installed.
+2.  Clone this repo using `git clone --depth=1 https://github.com/react-boilerplate/react-boilerplate.git`
+3.  Move to the appropriate directory: `cd react-boilerplate`.<br />
+4.  Run `npm run setup` in order to install dependencies and clean the git repo.<br />
+    _We auto-detect `yarn` for installing packages by default, if you wish to force `npm` usage do: `USE_YARN=false npm run setup`_<br />
+    _At this point you can run `npm start` to see the example app at `http://localhost:3000`._
+5.  Run `npm run clean` to delete the example app.
 
-- [ ] Upgrade to Webpack2 and using the tree-shaking feature to minimize bundle size.
-- [ ] Use [ReduxSauce](https://github.com/skellock/reduxsauce) & [Redux Sagas](https://github.com/redux-saga/redux-saga) instead of Redux thunk.
-- [ ] Service worker support.
-- [ ] Docker support.
+Now you're ready to rumble!
 
-## License <a name="license"></a>
-This project is licensed under the [MIT License](https://github.com/RanjithNair/MalayalaSangeethamInfoAPI/blob/master/LICENSE)
+> Please note that this boilerplate is **production-ready and not meant for beginners**! If you're just starting out with react or redux, please refer to https://github.com/petehunt/react-howto instead. If you want a solid, battle-tested base to build your next product upon and have some experience with react, this is the perfect start for you.
 
-## Support <a name="support"></a>
-If you would like to support this project, you can donate :-
+## Documentation
 
- [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/rjnair)
-## Author
+- [**The Hitchhikers Guide to `react-boilerplate`**](docs/general/introduction.md): An introduction for newcomers to this boilerplate.
+- [Overview](docs/general): A short overview of the included tools
+- [**Commands**](docs/general/commands.md): Getting the most out of this boilerplate
+- [Testing](docs/testing): How to work with the built-in test harness
+- [Styling](docs/css): How to work with the CSS tooling
+- [Your app](docs/js): Supercharging your app with Routing, Redux, simple
+  asynchronicity helpers, etc.
+- [**Troubleshooting**](docs/general/gotchas.md): Solutions to common problems faced by developers.
 
-Ranjith Nair
+## Supporters
+
+This project would not be possible without the support by these amazing folks. [**Become a sponsor**](https://opencollective.com/react-boilerplate) to get your company in front of thousands of engaged react developers and help us out!
+
+<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/0/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/1/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/2/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/3/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/4/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/5/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/6/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/7/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/8/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/react-boilerplate/bronze-sponsor/9/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/bronze-sponsor/9/avatar.svg"></a>
+
+---
+
+<a href="https://opencollective.com/react-boilerplate/backer/0/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/0/avatar.svg"></a>
+<a href="https://opencollective.com/react-boilerplate/backer/1/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/1/avatar.svg"></a>
+<a href="https://opencollective.com/react-boilerplate/backer/2/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/2/avatar.svg"></a>
+<a href="https://opencollective.com/react-boilerplate/backer/3/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/3/avatar.svg"></a>
+<a href="https://opencollective.com/react-boilerplate/backer/4/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/4/avatar.svg"></a>
+<a href="https://opencollective.com/react-boilerplate/backer/5/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/5/avatar.svg"></a>
+<a href="https://opencollective.com/react-boilerplate/backer/6/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/6/avatar.svg"></a>
+<a href="https://opencollective.com/react-boilerplate/backer/7/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/7/avatar.svg"></a>
+<a href="https://opencollective.com/react-boilerplate/backer/8/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/8/avatar.svg"></a>
+<a href="https://opencollective.com/react-boilerplate/backer/9/website" target="_blank"><img src="https://opencollective.com/react-boilerplate/backer/9/avatar.svg"></a>
+
+## License
+
+This project is licensed under the MIT license, Copyright (c) 2018 Maximilian
+Stoiber. For more information see `LICENSE.md`.
