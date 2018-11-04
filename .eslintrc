@@ -1,0 +1,49 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": ["airbnb", "prettier", "prettier/react"],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true,
+            "ecmaVersion": 6,
+            "modules": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": ["react", "prettier", "json"],
+    "settings": {
+        "react": {
+            "pragma": "React", // Pragma to use, default to "React",
+            "version": "16.4.0"
+        }
+    },
+    "globals": {
+        "Promise": true
+    },
+    "rules": {
+        "no-unused-vars": [1],
+        "react/jsx-uses-vars": ["error"],
+        "indent": ["error", 2, { "SwitchCase": 1 } ],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "single"],
+        "semi": ["error","always"],
+        "eol-last": [0],
+        "no-mixed-requires": [0],
+        "no-underscore-dangle": [0],
+        "no-console": [0],
+        "prettier/prettier": ["error"],
+        "camelcase": ["error", {
+            "allow": [
+                "UNSAFE_componentDidMount",
+                "UNSAFE_componentWillReceiveProps",
+                "UNSAFE_componentWillUpdate",
+                "UNSAFE_componentWillMount"
+            ]
+        }]
+    }
+}

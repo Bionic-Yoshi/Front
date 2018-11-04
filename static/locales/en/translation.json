@@ -1,0 +1,54 @@
+{
+  "welcome": "Welcome to Plirosi !",
+  "or" : "or",
+  "by" : "by",
+  "error": "Error",
+  "socket" : {
+    "connected": "Socket enabled",
+    "disconnected": "Socket disabled"
+  },
+  "button": {
+    "signin": "Sign In",
+    "signup": "Sign Up",
+    "signout": "Sign Out",
+    "profile": "Profile",
+    "lobby": "Lobby",
+    "join": "Join",
+    "create": "Create",
+    "connect": "Play",
+    "delete": "Delete",
+    "edit": "Edit info",
+    "gameQuit": "Quit the game",
+    "sure": "I'm sure",
+    "cancel": "Cancel",
+    "back": "Go back"
+  },
+  "input" : {
+    "name" : "Pseudo",
+    "email" : "Email",
+    "password": "Password",
+    "confpassword": "Password Confirmation",
+    "roomname": "Name of the room"
+  },
+  "lobby" : {
+    "description" : "Click the join button to play or create your own room.",
+    "createroomtitle": "Create a game room",
+    "createroomdesc": "Enter the name of your game room and click the button create to make your own game.",
+    "createroomtiletitle": "Create a game",
+    "createroomtiledesc": "Click here to create a game",
+    "joinroomtitle": "Join this game?",
+    "joinroomdesc": "Click the join button to join this game",
+    "created": "Created"
+  },
+  "game" : {
+    "quitGameTitle": "Are you sure ?",
+    "quitGameDesc": "By quitting you'll lose this game.",
+    "defeatTitle": "Defeat.",
+    "defeatDesc": "You'll be luckier next time.",
+    "victoryTitle": "Victory!",
+    "victoryDesc": "Your opponent didn't see it coming."
+  },
+  "profile":{
+    "yourinfo": "Your information"
+  }
+}

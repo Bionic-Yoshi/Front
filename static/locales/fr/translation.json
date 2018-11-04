@@ -1,0 +1,54 @@
+{
+  "welcome": "Bienvenue sur Plirosi !",
+  "or" : "ou",
+  "by" : "par",
+  "error": "Erreur",
+  "socket" : {
+    "connected": "Socket activé",
+    "disconnected": "Socket désactivé"
+  },
+  "button": {
+    "signin": "Connexion",
+    "signup": "Inscription",
+    "signout": "Déconnexion",
+    "profile": "Profil",
+    "lobby": "Foyer",
+    "join": "Rejoindre",
+    "connect": "Jouer",
+    "create": "Créer",
+    "delete": "Supprimer",
+    "edit": "Editer mes informations",
+    "gameQuit": "Quitter le jeu",
+    "sure": "Je suis sûr",
+    "cancel": "Annuler",
+    "back": "Retour"
+  },
+  "input" : {
+    "name" : "Pseudo",
+    "email" : "Adresse mail",
+    "password": "Mot de passe",
+    "confpassword": "Confirmation de mot de passe",
+    "roomname": "Nom de la partie"
+  },
+  "lobby" : {
+    "description" : "Cliquez sur rejoindre pour jouer ou créez votre propre partie.",
+    "createroomtitle": "Créez une partie",
+    "createroomdesc": "Saisissez le nom de votre partie et cliquez le button 'Créer' pour la créer.",
+    "createroomtiletitle": "Créer une partie",
+    "createroomtiledesc": "Cliquez pour créer une partie",
+    "joinroomtitle": "Rejoindre cette partie?",
+    "joinroomdesc": "Cliquez le bouton rejoindre pour entrer dans la partie",
+    "created": "Créée"
+  },
+  "game" : {
+    "quitGameTitle": "Êtes-vous sûr ?",
+    "quitGameDesc": "En quittant vous déclarez forfait.",
+    "defeatTitle": "Vous avez perdu.",
+    "defeatDesc": "Vous aurez plus de chance la prochaine fois.",
+    "victoryTitle": "Vous avez gagné!.",
+    "victoryDesc": "Votre adversaire n'a rien vu venir."
+  },
+  "profile":{
+    "yourinfo": "Vos informations"
+  }
+}
