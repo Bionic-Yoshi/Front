@@ -13,6 +13,7 @@ export const ROOM_CONNECT = 'room_connect';
 export const ROOM_JOIN = 'room_join';
 export const ROOM_DELETE = 'room_delete';
 export const ROOM_MSG = 'room_msg';
+export const GET_ROOM_FROM_SLUG = 'get_room_from_slug';
 
 export const ROOM_SOCKET_UPDATE = 'updateRoom';
 export const ROOM_SOCKET_REMOVE = 'deleteRoom';

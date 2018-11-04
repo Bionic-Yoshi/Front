@@ -1,7 +1,6 @@
-/* eslint-disable react/prefer-stateless-function,react/no-unescaped-entities */
 import React, { Component } from 'react';
 import { compose } from 'redux';
-// import jwtDecode from 'jwt-decode';
+import jwtDecode from 'jwt-decode';
 import PropTypes from 'prop-types';
 
 import { withNamespaces } from 'react-i18next';
@@ -12,22 +11,33 @@ import Typography from '@material-ui/core/Typography/Typography';
 import Button from '@material-ui/core/Button/Button';
 import CardActions from '@material-ui/core/CardActions/CardActions';
 
+import connect from 'react-redux/es/connect/connect';
 import DefeatGameDialog from './defeatGameDialog';
 import QuitGameDialog from './quitGameDialog';
 import VictoryGameDialog from './victoryGameDialog';
 import GameSpace from './gameSpace';
 
+import * as lobbyActions from '../../actions/lobby';
+
+function allowNull(wrappedPropTypes) {
+  return (props, propName, ...rest) => {
+    if (props[propName] === null) return null;
+    return wrappedPropTypes(props, propName, ...rest);
+  };
+}
+
 class GameScreen extends Component {
   constructor(props) {
     super(props);
 
-    console.log(props);
+    props.getRoomFromSlug(props.match.params.slug);
 
     this.state = {
       open: false,
       openDefeat: false,
       openVictory: false,
-      // tokenDecoded: jwtDecode(localStorage.getItem('token') || props.token),
+      isFirstToPlay: true,
+      tokenDecoded: jwtDecode(localStorage.getItem('token') || props.token),
     };
   }
 
@@ -60,10 +70,20 @@ class GameScreen extends Component {
     this.setState({ openVictory: false });
   };
 
-  render() {
-    const { t } = this.props;
+  nextPlayer = isFirstToPlay => {
+    this.setState({ isFirstToPlay: !isFirstToPlay });
+  };
 
-    const { open, openDefeat, openVictory } = this.state;
+  render() {
+    const { t, currentRoom, isLoaded } = this.props;
+
+    const {
+      open,
+      openDefeat,
+      openVictory,
+      isFirstToPlay,
+      tokenDecoded,
+    } = this.state;
 
     const propsQuitGameDialog = {
       open,
@@ -83,6 +103,13 @@ class GameScreen extends Component {
       handleQuit: this.handleQuitVictory,
     };
 
+    const propsGameSpace = {
+      isFirstToPlay,
+      nextPlayer: this.nextPlayer,
+      currentRoom,
+      currentPlayer: tokenDecoded ? tokenDecoded.email : 'toto@email.com',
+    };
+
     return (
       <div>
         <QuitGameDialog {...propsQuitGameDialog} />
@@ -92,10 +119,10 @@ class GameScreen extends Component {
         <Card raised>
           <CardContent style={{ textAlign: 'center' }}>
             <Typography component="h2" variant="h3" gutterBottom>
-              RoomName
+              {isLoaded ? currentRoom.title : 'Plirosi'}
             </Typography>
             <Typography variant="h4" gutterBottom>
-              It's $$$'s turn
+              {isFirstToPlay ? 'Mine turn' : 'Your turn'}
             </Typography>
           </CardContent>
           <CardActions style={{ justifyContent: 'center' }}>
@@ -110,16 +137,36 @@ class GameScreen extends Component {
           </CardActions>
         </Card>
         <br />
-        <GameSpace />
+        <GameSpace {...propsGameSpace} />
       </div>
     );
   }
 }
 
-GameScreen.propTypes = {
-  t: PropTypes.func.isRequired,
+GameScreen.defaultProps = {
+  currentRoom: null,
 };
 
-const enhance = compose(withNamespaces('translation'));
+GameScreen.propTypes = {
+  t: PropTypes.func.isRequired,
+  currentRoom: allowNull(PropTypes.object),
+};
+
+const mapStateToProps = state => ({
+  currentRoom: state.game.currentRoom,
+  isLoaded: state.game.isLoaded,
+});
+
+const mapDispatchToProps = dispatch => ({
+  getRoomFromSlug: slug => lobbyActions.getRoomFromSlug(slug)(dispatch),
+});
+
+const enhance = compose(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  ),
+  withNamespaces('translation'),
+);
 
 export default enhance(GameScreen);

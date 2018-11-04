@@ -18,7 +18,7 @@ Once installed you're able to build the client. Make sure that your **server** i
 #### Development mode
 To launch the client in dev mode, run `yarn start`. 
 
-You can access to your protect with : [http://localhost:8080](http://localhost:8080)
+You can access to your project with : [http://localhost:8080](http://localhost:8080)
 
 #### Production mode
 To build the client in prod mode, run `yarn build`.

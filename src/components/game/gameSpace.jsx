@@ -8,63 +8,53 @@ import GridList from '@material-ui/core/GridList/GridList';
 import GridListTile from '@material-ui/core/GridListTile/GridListTile';
 
 import empty from '../../../static/assets/empty.png';
-// import x from '../../../static/assets/x.png';
-// import o from '../../../static/assets/o.png';
 
 const tileData = [
   {
     title: 'Image2',
-    author: 'author',
     checked: true,
-    type: 'x',
+    owner: 'x',
   },
   {
     title: 'Image1',
-    author: 'author',
     checked: true,
-    type: 'o',
+    owner: 'o',
   },
   {
     title: 'Image4',
-    author: 'author',
     checked: true,
-    type: 'x',
+    owner: 'x',
   },
   {
     title: 'Image7',
     author: 'author',
     checked: true,
-    type: 'o',
+    owner: 'o',
   },
   {
     title: 'Image72',
-    author: 'author',
     checked: false,
-    type: 'n',
+    owner: 'n',
   },
   {
     title: 'Image82',
-    author: 'author',
     checked: false,
-    type: 'n',
+    owner: 'n',
   },
   {
     title: 'Image245',
-    author: 'author',
     checked: true,
-    type: 'o',
+    owner: 'o',
   },
   {
     title: 'Image843',
-    author: 'author',
     checked: false,
-    type: 'n',
+    owner: 'n',
   },
   {
     title: 'Image48355',
-    author: 'author',
     checked: false,
-    type: 'n',
+    owner: 'n',
   },
 ];
 
@@ -81,6 +71,8 @@ const styles = () => ({
 
 class GameSpace extends Component {
   render() {
+    const { isFirstToPlay, nextPlayer } = this.props;
+
     const { classes } = this.props;
 
     return (
@@ -92,9 +84,17 @@ class GameSpace extends Component {
           className={classes.gridList}
         >
           {tileData.map(tile => (
-            <GridListTile key={tile.title}>
-              <img src={empty} alt="GameImg" />
-            </GridListTile>
+            // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
+            <div
+              style={{ display: 'flex' }}
+              onClick={() => {
+                nextPlayer(isFirstToPlay);
+              }}
+            >
+              <GridListTile key={tile.title}>
+                <img src={empty} alt="GameImg" />
+              </GridListTile>
+            </div>
           ))}
         </GridList>
       </div>

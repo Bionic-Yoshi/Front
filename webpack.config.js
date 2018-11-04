@@ -28,15 +28,6 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
-      // {
-      //   test: /\.(png|jpg|gif)$/,
-      //   use: [
-      //     {
-      //       loader: 'file-loader',
-      //       options: {},
-      //     },
-      //   ],
-      // },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
@@ -51,15 +42,6 @@ module.exports = {
           },
         ],
       },
-      // {
-      //   test: /\.(json)$/,
-      //   use: [
-      //     {
-      //       loader: 'url-loader',
-      //       options: {},
-      //     },
-      //   ],
-      // },
     ],
   },
   plugins: [

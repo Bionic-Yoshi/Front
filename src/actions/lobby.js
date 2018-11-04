@@ -1,6 +1,11 @@
 /* eslint-disable func-names,import/prefer-default-export */
 import axios from 'axios';
-import { FETCH_ROOM, ROOM_CREATE, ROOM_JOIN } from './types';
+import {
+  FETCH_ROOM,
+  ROOM_CREATE,
+  ROOM_JOIN,
+  GET_ROOM_FROM_SLUG,
+} from './types';
 
 import config from '../conf';
 
@@ -60,6 +65,26 @@ export function joinRoom(slug) {
         if (response.status === 200) {
           dispatch({
             type: ROOM_JOIN,
+            payload: response.data,
+          });
+        } else console.log(response.status);
+      })
+      .catch(e => {
+        console.log(e.message);
+      });
+  };
+}
+
+export function getRoomFromSlug(slug) {
+  return function(dispatch) {
+    axios
+      .get(`${ROOT_URL}/getroom/${slug}`, {
+        headers: { authorization: localStorage.getItem('token') },
+      })
+      .then(response => {
+        if (response.status === 200) {
+          dispatch({
+            type: GET_ROOM_FROM_SLUG,
             payload: response.data,
           });
         } else console.log(response.status);

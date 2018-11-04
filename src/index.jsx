@@ -16,8 +16,8 @@ import Signup from './components/auth/signup';
 import RequireAuth from './components/auth/require_auth';
 import Welcome from './components/welcome';
 import LobbyGrid from './components/lobby/lobbyGrid';
-import ProfileUser from './components/profile/profileUser';
 import GameScreen from './components/game/gameScreen';
+import ProfileUser from './components/profile/profileUser';
 
 import './i18n';
 import registerServiceWorker from './registerServiceWorker';
@@ -55,9 +55,8 @@ ReactDOM.render(
         <Route exact path="/signin" component={Signin} />
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/signout" component={Signout} />
-        <Route exact path="/lobby" component={LobbyGrid} />
         <Route exact path="/profile" component={ProfileUser} />
-        {/* <Route path="/profile/:name" component={ProfileUser} /> */}
+        <Route exact path="/lobby" component={LobbyGrid} />
         <Route exact path="/game/:slug" component={GameScreen} />
         <Route path="private" component={RequireAuth(Private)} />
       </App>

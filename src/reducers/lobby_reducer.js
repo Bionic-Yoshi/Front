@@ -17,8 +17,6 @@ const initialState = {
 export default function(state = initialState, action) {
   switch (action.type) {
     case FETCH_ROOM:
-      console.log(state.rooms);
-      console.log(action.payload);
       return Object.assign({}, state, {
         rooms: action.payload,
         size: action.payload.length,
