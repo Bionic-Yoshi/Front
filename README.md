@@ -21,7 +21,8 @@ To launch the client in dev mode, run `yarn start`.
 To build the client in prod mode, run `yarn build`.
 
 #### Accessing the application
-You can access your project at : [http://localhost:8080](http://localhost:8080)
+You can access your project at : [http://localhost:8080](http://localhost:8080).
+Or our version hosted at [http://35.233.61.218](http://35.233.61.218).
 
 You can use Nginx config to serve dist folder.
 
